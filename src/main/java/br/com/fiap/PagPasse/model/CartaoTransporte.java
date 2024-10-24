@@ -1,8 +1,7 @@
 package br.com.fiap.PagPasse.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 import java.util.Objects;
@@ -11,6 +10,16 @@ import java.util.Objects;
 @Table(name = "tbl_cartaoTransporte")
 public class CartaoTransporte {
 
+    @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator = "PAGPASSE_SEQ"
+    )
+    @SequenceGenerator(
+            name = "PAGPASSE_SEQ",
+            sequenceName = "PAGPASSE_SEQ",
+            allocationSize = 1
+    )
 
     private Long id;
 

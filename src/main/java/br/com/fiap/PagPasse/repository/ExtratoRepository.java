@@ -3,7 +3,7 @@ package br.com.fiap.PagPasse.repository;
 import br.com.fiap.PagPasse.model.Extrato;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,9 +13,6 @@ public interface ExtratoRepository extends JpaRepository<Extrato, Long> {
 
     public Optional<Extrato> findByValorTarifa(Float valorTarifa);
 
-    public List<Extrato> findByDataPagamentoBetween(LocalDate dataPagamento);
-
-
-
-
+    // Método corrigido para buscar por intervalo de datas
+    public List<Extrato> findByDataPagamentoBetween(LocalDateTime startDate, LocalDateTime endDate);
 }
