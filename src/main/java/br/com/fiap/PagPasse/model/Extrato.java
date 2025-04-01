@@ -1,8 +1,7 @@
 package br.com.fiap.PagPasse.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 import java.util.Objects;
@@ -11,7 +10,8 @@ import java.util.Objects;
 @Table(name = "tbl_extrato")
 public class Extrato {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Float valorTarifa;

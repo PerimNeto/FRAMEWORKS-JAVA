@@ -7,20 +7,16 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-public interface CartaoTransporteRepository  extends JpaRepository<CartaoTransporte, Long> {
+public interface CartaoTransporteRepository extends JpaRepository<CartaoTransporte, Long> {
 
-    public Optional<CartaoTransporte> findById(Long id);
+    Optional<CartaoTransporte> findById(Long id);
 
-    public Optional<CartaoTransporte> findByNumeroCartao(Long numeroCartao);
+    Optional<CartaoTransporte> findByNumeroCartao(Long numeroCartao);
 
-    public List<CartaoTransporte> findBySaldoCartao(Float saldoCartao);
+    List<CartaoTransporte> findBySaldoCartao(Float saldoCartao);
 
-    public Optional<CartaoTransporte> findByTipoCartao(String tipoCartao);
+    Optional<CartaoTransporte> findByTipoCartao(String tipoCartao);
 
-    public Optional<CartaoTransporte> findByDataEmissaoBetween(LocalDate dataEmissao);
-
+    // Método corregido para buscar por rango de fechas
+    Optional<List<CartaoTransporte>> findByDataEmissaoBetween(LocalDate startDate, LocalDate endDate);
 }
-
-//perguntar sobre Between se é necessario, quando usar
-// Perguntar se tem que fazer realmente todos os repository (todas as columas)
-
