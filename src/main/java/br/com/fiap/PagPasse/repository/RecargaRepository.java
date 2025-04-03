@@ -15,7 +15,6 @@ public interface RecargaRepository extends JpaRepository<Recarga, Long> {
 
     public Optional<Recarga> findByMetodoPagamento(String metodoPagamento);
 
-    // Método corrigido para buscar por intervalo de datas
     public Optional<List<Recarga>> findByDataRecargaBetween(LocalDate startDate, LocalDate endDate);
 
     public Optional<Recarga> findByStatus(Boolean status);

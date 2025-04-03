@@ -15,7 +15,6 @@ public interface NotificacaoRepository extends JpaRepository<Notificacao, Long> 
 
     public Optional<Notificacao> findByMensagem(String mensagem);
 
-    // Método corrigido para buscar por intervalo de datas
     public List<Notificacao> findByDataEnvioBetween(LocalDate startDate, LocalDate endDate);
 
     public Optional<Notificacao> findByEmail(String email);

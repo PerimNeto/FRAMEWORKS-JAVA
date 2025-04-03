@@ -1,6 +1,7 @@
 package br.com.fiap.PagPasse.model;
 
 import jakarta.persistence.*;
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,7 +18,6 @@ public class Linha {
     private Date tempoEstimado;
     private String localizacaoAtual;
 
-    // Cambiamos esta propiedad para que coincida con la que usas en tu repositorio
     private Date dataUltimaAtualizacao;
 
     private Date horarioInicio;

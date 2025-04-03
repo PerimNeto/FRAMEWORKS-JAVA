@@ -13,6 +13,5 @@ public interface ExtratoRepository extends JpaRepository<Extrato, Long> {
 
     public Optional<Extrato> findByValorTarifa(Float valorTarifa);
 
-    // Método corrigido para buscar por intervalo de datas
     public List<Extrato> findByDataPagamentoBetween(LocalDateTime startDate, LocalDateTime endDate);
 }

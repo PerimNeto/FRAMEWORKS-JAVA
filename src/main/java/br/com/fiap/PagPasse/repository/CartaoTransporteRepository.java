@@ -17,6 +17,5 @@ public interface CartaoTransporteRepository extends JpaRepository<CartaoTranspor
 
     Optional<CartaoTransporte> findByTipoCartao(String tipoCartao);
 
-    // Método corregido para buscar por rango de fechas
     Optional<List<CartaoTransporte>> findByDataEmissaoBetween(LocalDate startDate, LocalDate endDate);
 }

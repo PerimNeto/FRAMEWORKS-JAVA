@@ -81,7 +81,11 @@ public class CartaoTransporte {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CartaoTransporte cartaoTransporte = (CartaoTransporte) o;
-        return Objects.equals(id, cartaoTransporte.id) && Objects.equals(numeroCartao, cartaoTransporte.numeroCartao) && Objects.equals(tipoCartao, cartaoTransporte.tipoCartao) && Objects.equals(saldoCartao, cartaoTransporte.saldoCartao) && Objects.equals(dataEmissao, cartaoTransporte.dataEmissao);
+        return Objects.equals(id, cartaoTransporte.id) &&
+                Objects.equals(numeroCartao, cartaoTransporte.numeroCartao) &&
+                Objects.equals(tipoCartao, cartaoTransporte.tipoCartao) &&
+                Objects.equals(saldoCartao, cartaoTransporte.saldoCartao) &&
+                Objects.equals(dataEmissao, cartaoTransporte.dataEmissao);
     }
 
     @Override
