@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug Main",
+      "request": "launch",
+      "mainClass": "br.com.fiap.PagPasse.PagPasseApplication",
+      "projectName": "PagPasse"
+    }
+  ]
+}
