@@ -1,0 +1,8 @@
+@"
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.com.fiap</groupId>
+    <artifactId>PagPasse</artifactId>
+    <version>1.0.0</version>
+</project>
+"@ | Set-Content -Path pom.xml
